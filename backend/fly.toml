@@ -1,0 +1,52 @@
+# Fly.io configuration for Backend
+app = "nexus-search-api"
+primary_region = "fra"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  PORT = "8000"
+  LOG_LEVEL = "info"
+  REDIS_HOST = "redis.nexus-search.internal"
+  REDIS_PORT = "6379"
+  IPFS_HOST = "ipfs.nexus-search.internal"
+  IPFS_PORT = "5001"
+
+[http_service]
+  internal_port = 8000
+  force_https = true
+  auto_stop_machines = false
+  auto_start_machines = true
+  min_machines_running = 1
+  
+  [http_service.concurrency]
+    type = "connections"
+    hard_limit = 250
+    soft_limit = 200
+
+  [[http_service.ports]]
+    port = 80
+    handlers = ["http"]
+    
+  [[http_service.ports]]
+    port = 443
+    handlers = ["tls", "http"]
+
+[[vm]]
+  cpu_kind = "shared"
+  cpus = 2
+  memory_mb = 1024
+
+[[mounts]]
+  source = "nexus_data"
+  destination = "/app/data"
+  initial_size = "1gb"
+
+[checks]
+  [checks.health]
+    port = 8000
+    path = "/health"
+    interval = "30s"
+    timeout = "10s"
+    grace_period = "40s"

@@ -6,19 +6,16 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'ipfs.io',
-        port: '',
         pathname: '/ipfs/**',
       },
       {
         protocol: 'https',
         hostname: 'gateway.ipfs.io',
-        port: '',
         pathname: '/ipfs/**',
       },
       {
         protocol: 'https',
         hostname: 'www.google.com',
-        port: '',
         pathname: '/s2/favicons/**',
       },
     ],
@@ -31,7 +28,11 @@ const nextConfig = {
     NEXT_PUBLIC_IPFS_GATEWAY: process.env.NEXT_PUBLIC_IPFS_GATEWAY || 'https://ipfs.io/ipfs/',
     NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID: process.env.NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID || 'nexus-search',
   },
-  // Security headers
+  // Vercel serverless function timeout
+  serverRuntimeConfig: {
+    timeout: 60,
+  },
+  // Security headers for production
   async headers() {
     return [
       {
@@ -64,6 +65,12 @@ const nextConfig = {
         ],
       },
     ]
+  },
+  // Vercel edge config if needed
+  experimental: {
+    serverActions: {
+      bodySizeLimit: '2mb',
+    },
   },
 }
 

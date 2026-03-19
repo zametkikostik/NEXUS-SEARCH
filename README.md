@@ -1,154 +1,220 @@
 # NEXUS SEARCH
 
-[![CI/CD](https://github.com/zametkikostik/NEXUS-SEARCH/actions/workflows/ci.yml/badge.svg)](https://github.com/zametkikostik/NEXUS-SEARCH/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/zametkikostik/NEXUS-SEARCH)
+[![Deploy to Fly.io](https://fly.io/public/button.svg)](https://fly.io/launch?repo=https://github.com/zametkikostik/NEXUS-SEARCH)
 
 ## 🚀 Децентрализованная поисковая система нового поколения
 
-NEXUS Search — это privacy-first поисковая система с Web3 аутентификацией, IPFS хранением и токеномикой.
+**NEXUS Search** — это privacy-first поисковая система с Web3 аутентификацией, IPFS хранением и токеномикой.
 
-### Особенности
+### ✨ Особенности
 
-- 🔍 **Мульти-провайдер поиск** — Google, DuckDuckGo, Brave, Yandex, Dzen, Reddit
+- 🔍 **6+ поисковых провайдеров** — Google, DuckDuckGo, Brave, Yandex, Dzen, Reddit
 - 🛡️ **Privacy-First** — никаких логов, никакого трекинга
 - 🔐 **Web3 Аутентификация** — вход через криптокошелёк (MetaMask, WalletConnect)
 - 📦 **IPFS Интеграция** — децентрализованное хранение результатов
 - 🔄 **Анти-Бан Система** — ротация прокси, обход блокировок
 - 💰 **Токеномика** — ERC20 токен NXS, стейкинг rewards
 - 🎯 **Контент Фильтры** — блокировка экстремизма, терроризма, пропаганды
+- ⚡ **Vercel Ready** — frontend готов к деплою на Vercel
+- 🐳 **Dockerized Backend** — backend готов к деплою на Fly.io/Railway/Render
+
+---
 
 ## 📁 Структура проекта
 
 ```
 NEXUS-SEARCH/
-├── backend/                 # FastAPI backend
-│   ├── api/                # API endpoints
-│   ├── core/               # Core configuration
-│   ├── providers/          # Search providers
-│   ├── anti_bot/           # Anti-bot layer
-│   ├── filters/            # Content filters
-│   ├── web3/               # Web3 authentication
-│   ├── ipfs/               # IPFS integration
-│   └── tests/              # Unit tests
-├── frontend/               # Next.js 14 frontend
+├── frontend/                 # Next.js 14 + TypeScript (Vercel)
 │   ├── src/
-│   │   ├── app/           # App router pages
-│   │   ├── components/    # React components
-│   │   ├── hooks/         # Custom hooks
-│   │   ├── stores/        # Zustand stores
-│   │   └── utils/         # Utilities
-│   └── public/
-├── contracts/              # Smart contracts
-│   ├── NXS_Token.sol      # ERC20 token
-│   ├── NXS_Staking.sol    # Staking contract
-│   └── NXS_Subscription.sol # Subscription NFT
+│   │   ├── app/             # App Router страницы
+│   │   ├── components/      # React компоненты
+│   │   ├── hooks/           # Custom hooks
+│   │   ├── stores/          # Zustand stores
+│   │   └── utils/           # API client
+│   ├── vercel.json          # Vercel конфигурация
+│   ├── next.config.js       # Next.js конфиг
+│   └── package.json
+├── backend/                  # FastAPI + Python (Fly.io/Railway)
+│   ├── api/                 # API endpoints
+│   ├── core/                # Core модули
+│   ├── providers/           # Search providers
+│   ├── anti_bot/            # Anti-bot layer
+│   ├── filters/             # Content filters
+│   ├── web3/                # Web3 auth
+│   ├── ipfs/                # IPFS integration
+│   ├── tests/               # Unit tests
+│   ├── Dockerfile           # Production Docker
+│   ├── fly.toml             # Fly.io конфиг
+│   └── requirements-prod.txt
+├── contracts/               # Smart Contracts
+│   ├── NXS_Token.sol        # ERC20 токен
+│   ├── NXS_Staking.sol      # Стейкинг
+│   └── NXS_Subscription.sol # NFT подписка
 ├── scripts/
-│   └── deploy.sh          # Deployment script
-├── docker-compose.yml      # Docker orchestration
+│   ├── deploy.sh            # Deploy скрипт
+│   └── init-github.sh       # GitHub инициализация
+├── docker-compose.yml       # Local development
 └── README.md
 ```
 
-## 🛠️ Быстрый старт
+---
 
-### Требования
+## 🚀 Быстрый старт
 
-- Docker & Docker Compose
-- Node.js 18+ (для локальной разработки)
-- Python 3.11+ (для локальной разработки)
-- MetaMask или Web3 кошелёк
-
-### 1. Клонирование репозитория
+### Вариант 1: Docker (локальная разработка)
 
 ```bash
+# Клонировать репозиторий
 git clone https://github.com/zametkikostik/NEXUS-SEARCH.git
 cd NEXUS-SEARCH
-```
 
-### 2. Настройка окружения
-
-```bash
-# Скопировать файл окружения
+# Скопировать .env
 cp .env.example .env
 
-# Отредактировать .env (обязательно измените JWT_SECRET!)
-nano .env
-```
-
-**Минимальная конфигурация (.env):**
-```bash
-# Обязательно измените!
-JWT_SECRET=your-super-secret-jwt-key-min-32-chars
-WEB3_PROVIDER_URI=https://eth-mainnet.g.alchemy.com/v2/YOUR_KEY
-
-# Опционально (для продакшн)
-ALLOWED_ORIGINS=https://your-domain.com
-```
-
-### 3. Запуск с Docker
-
-```bash
 # Запустить все сервисы
 docker-compose up -d
 
-# Проверить статус
-docker-compose ps
-
-# Посмотреть логи
-docker-compose logs -f
+# Доступ
+# Frontend: http://localhost:3000
+# Backend: http://localhost:8000
+# API Docs: http://localhost:8000/docs
 ```
 
-### 4. Доступ к приложению
+### Вариант 2: Vercel + Внешний Backend
 
-| Сервис | URL |
-|--------|-----|
-| Frontend | http://localhost:3000 |
-| Backend API | http://localhost:8000 |
-| API Docs (Swagger) | http://localhost:8000/docs |
-| IPFS Gateway | http://localhost:8080 |
+#### 1. Деплой Frontend на Vercel
+
+```bash
+cd frontend
+
+# Установить зависимости
+npm install
+
+# Настроить .env.local
+cp .env.example .env.local
+nano .env.local  # Изменить NEXT_PUBLIC_API_URL
+
+# Деплой на Vercel
+vercel --prod
+```
+
+Или нажмите кнопку:
+
+[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/zametkikostik/NEXUS-SEARCH&project-name=nexus-search-frontend&repository-name=nexus-search-frontend&env=NEXT_PUBLIC_API_URL,NEXT_PUBLIC_WEB3_CHAIN_ID,NEXT_PUBLIC_CONTRACT_ADDRESS)
+
+#### 2. Деплой Backend на Fly.io
+
+```bash
+cd backend
+
+# Установить Fly.io CLI
+curl -L https://fly.io/install.sh | sh
+
+# Авторизация
+fly auth login
+
+# Создать приложение
+fly launch --name nexus-search-api
+
+# Настроить переменные окружения
+fly secrets set JWT_SECRET=your-secret \
+  WEB3_PROVIDER_URI=https://eth-mainnet.g.alchemy.com/v2/YOUR_KEY \
+  REDIS_URL=redis://your-redis-url
+
+# Деплой
+fly deploy
+```
+
+Или используйте Railway/Render:
+
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/nexus-search)
+[![Deploy on Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
+
+---
 
 ## 🔌 API Endpoints
 
 ### Поиск
+
 ```bash
 # Базовый поиск
-curl "http://localhost:8000/api/v1/search?q=blockchain"
+curl "https://your-backend-url.com/api/v1/search?q=blockchain"
 
-# С выбором провайдеров
-curl "http://localhost:8000/api/v1/search?q=crypto&providers=google,duckduckgo&limit=10"
+# С провайдерами
+curl "https://your-backend-url.com/api/v1/search?q=crypto&providers=google,duckduckgo&limit=10"
 ```
 
 ### Аутентификация
+
 ```bash
 # Получить сообщение для подписи
-curl "http://localhost:8000/api/v1/auth/message?address=0x742d35Cc6634C0532925a3b844Bc9e7595f0bEb"
+curl "https://your-backend-url.com/api/v1/auth/message?address=0x742d35Cc6634C0532925a3b844Bc9e7595f0bEb"
 
 # Верифицировать подпись
-curl -X POST "http://localhost:8000/api/v1/auth/verify" \
+curl -X POST "https://your-backend-url.com/api/v1/auth/verify" \
   -H "Content-Type: application/json" \
   -d '{"address":"0x...","message":"...","signature":"0x..."}'
 ```
 
 ### IPFS
+
 ```bash
 # Получить из IPFS
-curl "http://localhost:8000/api/v1/ipfs/retrieve/QmYourCID"
+curl "https://your-backend-url.com/api/v1/ipfs/retrieve/QmYourCID"
 ```
 
-### Health Check
+### Health
+
 ```bash
-curl "http://localhost:8000/health"
+curl "https://your-backend-url.com/health"
 ```
 
-## 🌐 Провайдеры поиска
+---
 
-| Провайдер | Статус | API Key |
-|-----------|--------|---------|
-| Google | ✅ | Требуется (Custom Search API) |
-| DuckDuckGo | ✅ | Не требуется |
-| Brave | ✅ | Требуется (Search API) |
-| Yandex | ✅ | Не требуется |
-| Dzen | ✅ | Не требуется |
-| Reddit | ✅ | Не требуется |
+## 🔐 Настройка окружения
+
+### Frontend (.env.local)
+
+```bash
+# API URL (ваш backend)
+NEXT_PUBLIC_API_URL=https://nexus-search-api.fly.dev
+
+# Web3
+NEXT_PUBLIC_WEB3_CHAIN_ID=1
+NEXT_PUBLIC_CONTRACT_ADDRESS=0x0000000000000000000000000000000000000000
+NEXT_PUBLIC_TOKEN_CONTRACT_ADDRESS=0x0000000000000000000000000000000000000000
+NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID=your-walletconnect-id
+
+# IPFS
+NEXT_PUBLIC_IPFS_GATEWAY=https://ipfs.io/ipfs/
+```
+
+### Backend (.env)
+
+```bash
+# Обязательно
+JWT_SECRET=your-super-secret-jwt-key-min-32-chars
+WEB3_PROVIDER_URI=https://eth-mainnet.g.alchemy.com/v2/YOUR_KEY
+
+# Redis
+REDIS_HOST=localhost
+REDIS_PORT=6379
+REDIS_URL=redis://localhost:6379
+
+# IPFS
+IPFS_HOST=localhost
+IPFS_PORT=5001
+
+# Опционально
+GOOGLE_API_KEY=your-google-api-key
+GOOGLE_CX=your-google-cx
+BRAVE_API_KEY=your-brave-api-key
+SENTRY_DSN=your-sentry-dsn
+```
+
+---
 
 ## 💰 Токеномика NXS
 
@@ -159,8 +225,6 @@ curl "http://localhost:8000/health"
 | Инвесторы | 20% | 2 года вестинга |
 | Экосистема | 20% | Гранты, партнёрства |
 | Ликвидность | 10% | DEX листинги |
-
-## 📄 Смарт-контракты
 
 ### Развёртывание контрактов
 
@@ -173,153 +237,107 @@ npm install
 # Скомпилировать
 npm run compile
 
-# Запустить локальный блокчейн
-npx hardhat node
+# Деплой на testnet
+npx hardhat run scripts/deploy.js --network sepolia
 
-# Задеплоить (в другом терминале)
-npm run deploy:local
+# Деплой на mainnet
+npx hardhat run scripts/deploy.js --network mainnet
 ```
 
-### Контракты
-- `NXS_Token.sol` — ERC20 токен с vesting
-- `NXS_Staking.sol` — Стейкинг с 5% APY
-- `NXS_Subscription.sol` — NFT подписка (Basic/Premium/Enterprise)
+---
 
 ## 🧪 Тестирование
 
-### Backend тесты
+### Backend
+
 ```bash
 cd backend
 pip install -r requirements.txt
 pytest --cov=.
 ```
 
-### Frontend тесты
+### Frontend
+
 ```bash
 cd frontend
 npm install
 npm test
 ```
 
-### Контракты тесты
-```bash
-cd contracts
-npm test
-```
-
-## 🚀 Production Deployment
-
-### 1. Настройка production окружения
-
-```bash
-# Создать production .env
-cp .env.example .env
-
-# Изменить переменные для production
-nano .env
-```
-
-**Production .env:**
-```bash
-# Backend
-JWT_SECRET=<secure-random-64-chars>
-WEB3_PROVIDER_URI=https://eth-mainnet.g.alchemy.com/v2/YOUR_KEY
-ALLOWED_ORIGINS=https://your-domain.com
-SENTRY_DSN=https://your-sentry-dsn
-
-# Frontend
-NEXT_PUBLIC_API_URL=https://api.your-domain.com
-NEXT_PUBLIC_WEB3_CHAIN_ID=1
-NEXT_PUBLIC_CONTRACT_ADDRESS=0xYourTokenAddress
-NEXT_PUBLIC_TOKEN_CONTRACT_ADDRESS=0xYourTokenAddress
-NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID=your-project-id
-```
-
-### 2. Развёртывание на сервере
-
-```bash
-# На сервере (Ubuntu/Debian)
-
-# Установить Docker
-curl -fsSL https://get.docker.com -o get-docker.sh
-sudo sh get-docker.sh
-
-# Установить Docker Compose
-sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
-
-# Клонировать репозиторий
-git clone https://github.com/zametkikostik/NEXUS-SEARCH.git
-cd NEXUS-SEARCH
-
-# Настроить окружение
-cp .env.example .env
-nano .env
-
-# Запустить production compose
-docker-compose -f docker-compose.prod.yml up -d
-```
-
-### 3. Настройка Nginx (опционально)
-
-```bash
-# Создать директорию для nginx
-mkdir -p nginx/ssl
-
-# Положить SSL сертификаты в nginx/ssl/
-# certificate.crt
-# private.key
-
-# Запустить с nginx
-docker-compose -f docker-compose.prod.yml --profile with-nginx up -d
-```
-
-### 4. Автоматический деплой скриптом
-
-```bash
-# Запустить deploy скрипт
-chmod +x scripts/deploy.sh
-./scripts/deploy.sh
-```
+---
 
 ## 📊 Мониторинг
 
 ### Prometheus метрики
+
 ```bash
-curl http://localhost:8000/metrics
+curl https://your-backend-url.com/metrics
 ```
 
-### Health endpoints
+### Health checks
+
 ```bash
-# Общий health
-curl http://localhost:8000/health
+# Backend health
+curl https://your-backend-url.com/health
 
-# Liveness probe
-curl http://localhost:8000/health/live
-
-# Readiness probe
-curl http://localhost:8000/health/ready
-
-# Статус провайдеров
-curl http://localhost:8000/providers
+# Provider status
+curl https://your-backend-url.com/providers
 ```
+
+---
+
+## 🚀 Production Deployment Checklist
+
+### Перед деплоем
+
+- [ ] Сгенерировать secure JWT_SECRET (минимум 32 символа)
+- [ ] Настроить Web3 provider (Infura/Alchemy)
+- [ ] Получить API ключи для провайдеров (Google, Brave)
+- [ ] Настроить Redis (production instance)
+- [ ] Настроить IPFS node (или использовать Pinata)
+- [ ] Развернуть смарт-контракты
+- [ ] Обновить адреса контрактов в .env
+
+### Деплой
+
+- [ ] Задеплоить backend (Fly.io/Railway/Render)
+- [ ] Задеплоить frontend (Vercel)
+- [ ] Настроить домен и SSL
+- [ ] Настроить CORS для frontend domain
+- [ ] Проверить health endpoints
+- [ ] Протестировать поиск
+- [ ] Протестировать Web3 auth
+
+### После деплоя
+
+- [ ] Настроить мониторинг (Sentry, Prometheus)
+- [ ] Настроить логирование
+- [ ] Настроить backup (Redis, IPFS)
+- [ ] Настроить auto-scaling
+- [ ] Добавить rate limiting
+
+---
 
 ## 🔒 Безопасность
 
 ### Настройки безопасности
+
 - ✅ Input validation (Pydantic)
 - ✅ SSRF prevention
 - ✅ CORS configuration
 - ✅ Rate limiting
 - ✅ Security headers
-- ✅ HTTPS only (production)
+- ✅ HTTPS only
 
 ### Рекомендации
-1. Измените все default значения
-2. Используйте secure JWT_SECRET (минимум 32 символа)
-3. Включите HTTPS в production
-4. Настройте firewall правила
-5. Регулярно обновляйте зависимости
+
+1. Используйте secure JWT_SECRET (минимум 32 символа)
+2. Включите HTTPS в production
+3. Настройте firewall правила
+4. Регулярно обновляйте зависимости
+5. Используйте multi-sig для контрактов
+
+---
 
 ## 🤝 Contributing
 
@@ -329,26 +347,23 @@ curl http://localhost:8000/providers
 4. Push (`git push origin feature/amazing-feature`)
 5. Открыть Pull Request
 
+---
+
 ## 📞 Контакты
 
 - **GitHub**: https://github.com/zametkikostik/NEXUS-SEARCH
 - **Email**: zametkikostik@gmail.com
 - **Telegram**: @zametkikostik
 
+---
+
 ## 📄 Лицензия
 
 MIT License — см. файл [LICENSE](LICENSE) для деталей.
-
-## 🙏 Благодарности
-
-- OpenZeppelin — смарт-контракты
-- FastAPI — backend фреймворк
-- Next.js — frontend фреймворк
-- RainbowKit — Web3 UI
-- IPFS — децентрализованное хранение
 
 ---
 
 **NEXUS SEARCH** — Децентрализованное будущее поиска 🌐
 
-[![Star History Chart](https://api.star-history.com/svg?repos=zametkikostik/NEXUS-SEARCH&type=Date)](https://star-history.com/#zametkikostik/NEXUS-SEARCH&Date)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/zametkikostik/NEXUS-SEARCH)
+[![Deploy to Fly.io](https://fly.io/public/button.svg)](https://fly.io/launch?repo=https://github.com/zametkikostik/NEXUS-SEARCH)

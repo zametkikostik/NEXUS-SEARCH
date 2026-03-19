@@ -1,5 +1,6 @@
 /**
  * API Client for NEXUS Search Backend
+ * Works with both local and deployed backend
  */
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'
@@ -190,3 +191,6 @@ export const healthApi = {
     return request('/providers')
   }
 }
+
+// Export API URL for direct use
+export { API_URL }
