@@ -1,21 +1,209 @@
-MIT License
+# LICENSE
 
-Copyright (c) 2024 NEXUS Search
+## Zametki Kostik NEXUS SEARCH © 2026 Zametki Kostik. All rights reserved.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+---
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+## PROPRIETARY COMMERCIAL LICENSE AGREEMENT
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+**IMPORTANT NOTICE:** This software is proprietary and confidential. By accessing, downloading, or using this software, you agree to be bound by the terms of this License Agreement. If you do not agree to these terms, do not use this software.
+
+---
+
+## 1. DEFINITIONS
+
+1.1 **"Software"** refers to the complete source code, object code, documentation, and all related materials comprising the "Zametki Kostik NEXUS SEARCH" project, including but not limited to:
+- Frontend code (Next.js, React, TypeScript)
+- Backend code (Python, FastAPI)
+- Smart contracts (Solidity)
+- Configuration files, scripts, and documentation
+- All derivatives, modifications, and improvements
+
+1.2 **"Licensor"** refers to Zametki Kostik, the copyright holder and owner of all rights to the Software.
+
+1.3 **"Licensee"** refers to any individual, organization, or entity that has entered into a written agreement with the Licensor to use the Software.
+
+1.4 **"Revenue"** refers to any income, profit, or financial benefit generated directly or indirectly from the use of the Software, including but not limited to:
+- Search service fees
+- Subscription revenues
+- Token transaction fees
+- Staking rewards
+- Advertising revenues
+- Any other monetization methods
+
+---
+
+## 2. LICENSE GRANT
+
+2.1 **Limited License**: Subject to the terms and conditions of this Agreement and upon execution of a separate written license agreement with the Licensor, the Licensor grants the Licensee a non-exclusive, non-transferable, revocable license to use the Software.
+
+2.2 **Written Agreement Required**: Use, copy, modification, or distribution of this Software is **only permitted under a written agreement** with the Licensor. No rights are granted without such written agreement.
+
+2.3 **Scope of License**: The specific scope, territory, and permitted uses shall be defined in the separate written license agreement between the Licensor and Licensee.
+
+---
+
+## 3. COMMERCIAL USE AND REVENUE SHARING
+
+3.1 **Commercial Use Permitted Only Under Agreement**: Any commercial use of the Software is allowed **only under a revenue-sharing agreement** with the Licensor.
+
+3.2 **Revenue Share**: The Licensee agrees to pay the Licensor **[X]% of all Revenue** generated from products or services using the Zametki Kostik NEXUS SEARCH Software. The specific percentage shall be defined in the written license agreement.
+
+3.3 **Payment Terms**: 
+- Revenue share payments shall be made [monthly/quarterly] as specified in the written agreement
+- Licensee shall maintain accurate records of all Revenue
+- Licensor reserves the right to audit such records with reasonable notice
+
+3.4 **Upfront Fees**: Any upfront fees, minimum guarantees, or alternative revenue models must be agreed upon in writing between the Licensor and Licensee.
+
+3.5 **Reporting**: Licensee shall provide detailed revenue reports to the Licensor as specified in the written agreement.
+
+---
+
+## 4. RESTRICTIONS
+
+4.1 **No Unauthorized Distribution**: Distribution, fork, publication, or sharing of the source code **without written permission** from the Licensor is strictly prohibited and constitutes a material breach of this Agreement.
+
+4.2 **No Unauthorized Modifications**: All modifications, improvements, translations, adaptations, or derivative works must be approved in writing by the Licensor prior to implementation.
+
+4.3 **No Reverse Engineering**: Licensee shall not reverse engineer, decompile, disassemble, or attempt to derive the source code or underlying ideas of the Software.
+
+4.4 **No Sublicensing**: Licensee shall not sublicense, rent, lease, or otherwise transfer any rights to the Software without prior written consent from the Licensor.
+
+4.5 **No Competitive Use**: Licensee shall not use the Software to create a competitive product or service without explicit written permission.
+
+4.6 **Confidentiality**: Licensee shall treat the Software as confidential and shall not disclose it to third parties without written permission.
+
+---
+
+## 5. APPROVAL REQUIREMENTS
+
+5.1 **Modifications and Improvements**: All modifications, improvements, enhancements, or derivative works must be submitted to the Licensor for review and approval prior to deployment or distribution.
+
+5.2 **Forks and Branches**: Any forks, branches, or separate versions of the Software must be approved in writing by the Licensor.
+
+5.3 **Integration**: Integration of the Software with other systems, platforms, or services requires prior written approval from the Licensor.
+
+---
+
+## 6. TERMINATION
+
+6.1 **Termination for Cause**: This License shall automatically terminate upon any breach of the terms herein, including but not limited to:
+- Failure to make revenue share payments
+- Unauthorized distribution or modification
+- Violation of any restriction in Section 4
+- Any other material breach of this Agreement
+
+6.2 **Termination by Licensor**: The Licensor reserves the right to terminate this License at any time, with or without cause, upon written notice to the Licensee.
+
+6.3 **Effect of Termination**: Upon termination:
+- All rights granted herein shall immediately cease
+- Licensee must immediately cease all use of the Software
+- Licensee must destroy or return all copies of the Software to the Licensor
+- Licensee must remove the Software from all systems and platforms
+- Licensee must certify in writing that all copies have been destroyed or returned
+
+6.4 **Survival**: Sections 7 (Disclaimer of Warranty), 8 (Limitation of Liability), and 9 (General Provisions) shall survive any termination of this Agreement.
+
+---
+
+## 7. DISCLAIMER OF WARRANTY
+
+7.1 **"AS IS" Basis**: THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF:
+- MERCHANTABILITY
+- FITNESS FOR A PARTICULAR PURPOSE
+- NON-INFRINGEMENT
+- TITLE
+- QUIET ENJOYMENT
+
+7.2 **No Guarantees**: The Licensor does not warrant that:
+- The Software will be uninterrupted or error-free
+- Defects will be corrected
+- The Software is free of viruses or harmful components
+- The Software will meet Licensee's requirements
+
+7.3 **No Support Obligation**: The Licensor has no obligation to provide updates, upgrades, bug fixes, support, or maintenance unless explicitly agreed in a separate written agreement.
+
+---
+
+## 8. LIMITATION OF LIABILITY
+
+8.1 **No Consequential Damages**: IN NO EVENT SHALL THE LICENSOR BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO:
+- Loss OF PROFITS, DATA, OR USE
+- COST OF PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES
+- BUSINESS INTERRUPTION
+- PERSONAL INJURY OR PROPERTY DAMAGE
+
+8.2 **Cap on Liability**: The Licensor's total liability for any claim arising out of or relating to this Agreement or the Software shall not exceed the total amount paid by the Licensee to the Licensor in the twelve (12) months preceding the claim, or ONE HUNDRED DOLLARS ($100.00) if no payment has been made.
+
+8.3 **Basis of Bargain**: THE PARTIES AGREE THAT THE LIMITATIONS AND DISCLAIMERS IN THIS SECTION ARE AN ESSENTIAL BASIS OF THE BARGAIN BETWEEN THE PARTIES.
+
+---
+
+## 9. GENERAL PROVISIONS
+
+9.1 **Governing Law**: This Agreement shall be governed by and construed in accordance with the laws of [Jurisdiction], without regard to its conflict of law provisions.
+
+9.2 **Dispute Resolution**: Any dispute arising out of or relating to this Agreement shall be resolved through good faith negotiations. If negotiations fail, the dispute shall be resolved through binding arbitration in [Location] in accordance with the rules of [Arbitration Body].
+
+9.3 **Entire Agreement**: This Agreement, together with any separate written license agreement, constitutes the entire agreement between the parties regarding the subject matter hereof and supersedes all prior or contemporaneous agreements.
+
+9.4 **Amendments**: Any amendments or modifications to this Agreement must be in writing and signed by both parties.
+
+9.5 **Severability**: If any provision of this Agreement is held to be invalid or unenforceable, the remaining provisions shall continue in full force and effect.
+
+9.6 **Waiver**: The failure of the Licensor to enforce any right or provision of this Agreement shall not constitute a waiver of such right or provision.
+
+9.7 **Assignment**: Licensee may not assign or transfer any rights under this Agreement without the prior written consent of the Licensor.
+
+9.8 **Notices**: All notices shall be in writing and delivered to the addresses specified in the separate license agreement.
+
+---
+
+## 10. ACCEPTANCE
+
+10.1 **Acknowledgment**: BY ACCESSING, DOWNLOADING, INSTALLING, OR USING THIS SOFTWARE, YOU ACKNOWLEDGE THAT:
+- YOU HAVE READ THIS AGREEMENT
+- YOU UNDERSTAND THIS AGREEMENT
+- YOU AGREE TO BE BOUND BY THE TERMS OF THIS AGREEMENT
+- YOU UNDERSTAND THAT COMMERCIAL USE REQUIRES A SEPARATE WRITTEN AGREEMENT WITH REVENUE SHARING
+
+10.2 **No Implied License**: No license or right is granted by implication, estoppel, or otherwise except as expressly set forth in this Agreement.
+
+---
+
+## 11. CONTACT INFORMATION
+
+For licensing inquiries, revenue-sharing agreements, or questions regarding this License:
+
+**Licensor:** Zametki Kostik  
+**Email:** zametkikostik@gmail.com  
+**Telegram:** @zametkikostik  
+**GitHub:** https://github.com/zametkikostik
+
+---
+
+## 12. DURATION
+
+This License is valid indefinitely for parties who have executed a written license agreement with the Licensor, subject to:
+- Compliance with all terms and conditions
+- Timely payment of all revenue share obligations
+- No material breach of this Agreement
+
+---
+
+**Zametki Kostik NEXUS SEARCH © 2026 Zametki Kostik. All rights reserved.**
+
+---
+
+*Last Updated: January 2026*
+
+*Version: 1.0*
+
+---
+
+## IMPORTANT NOTICE FOR GITHUB USERS
+
+This repository is hosted on GitHub for viewing purposes only. **Forking, copying, or distributing this code without a written license agreement is strictly prohibited.** 
+
+If you wish to use this Software commercially, please contact the Licensor at zametkikostik@gmail.com to negotiate a revenue-sharing agreement.
