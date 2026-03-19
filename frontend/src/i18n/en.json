@@ -1,0 +1,104 @@
+{
+  "common": {
+    "search": "Search",
+    "searching": "Searching...",
+    "loading": "Loading",
+    "error": "Error",
+    "retry": "Retry",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "home": "Home",
+    "settings": "Settings",
+    "profile": "Profile",
+    "logout": "Logout",
+    "connect": "Connect",
+    "disconnect": "Disconnect",
+    "connected": "Connected",
+    "disconnected": "Disconnected"
+  },
+  "search": {
+    "placeholder": "Search the decentralized web...",
+    "results": "results",
+    "noResults": "No results found",
+    "searchAgain": "Try a different search term",
+    "providers": "Providers",
+    "filterContent": "Filter inappropriate content",
+    "safeSearch": "Safe Search",
+    "advancedSearch": "Advanced Search",
+    "recentSearches": "Recent Searches",
+    "clearHistory": "Clear History"
+  },
+  "wallet": {
+    "connectWallet": "Connect Wallet",
+    "disconnectWallet": "Disconnect Wallet",
+    "walletConnected": "Wallet Connected",
+    "walletDisconnected": "Wallet Disconnected",
+    "wrongNetwork": "Wrong Network",
+    "switchNetwork": "Switch Network",
+    "copyAddress": "Copy Address",
+    "addressCopied": "Address copied",
+    "balance": "Balance",
+    "insufficientBalance": "Insufficient balance"
+  },
+  "token": {
+    "tokenName": "NEXUS Search Token",
+    "symbol": "NXS",
+    "balance": "Token Balance",
+    "stake": "Stake",
+    "unstake": "Unstake",
+    "rewards": "Rewards",
+    "claimRewards": "Claim Rewards",
+    "stakingAPY": "Staking APY",
+    "totalStaked": "Total Staked",
+    "yourStake": "Your Stake",
+    "earnings": "Earnings"
+  },
+  "nav": {
+    "home": "Home",
+    "search": "Search",
+    "token": "Token",
+    "staking": "Staking",
+    "about": "About",
+    "docs": "Documentation",
+    "support": "Support"
+  },
+  "footer": {
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "license": "License",
+    "contact": "Contact",
+    "github": "GitHub",
+    "telegram": "Telegram",
+    "copyright": "© 2026 Zametki Kostik NEXUS SEARCH. All rights reserved."
+  },
+  "compliance": {
+    "gdprNotice": "GDPR Compliant - No data tracking",
+    "ccpaNotice": "CCPA Compliant - Do Not Sell My Data",
+    "cookieNotice": "We use essential cookies only",
+    "privacyFirst": "Privacy-First Search",
+    "noLogs": "No logs stored",
+    "anonymous": "Anonymous search"
+  },
+  "errors": {
+    "networkError": "Network error. Please try again.",
+    "searchError": "Search failed. Please try again.",
+    "walletError": "Wallet connection failed.",
+    "authError": "Authentication failed.",
+    "serverError": "Server error. Please try again later.",
+    "notFound": "Page not found.",
+    "rateLimit": "Too many requests. Please wait."
+  },
+  "regions": {
+    "selectRegion": "Select Region",
+    "europe": "Europe",
+    "northAmerica": "North America",
+    "asiaPacific": "Asia Pacific",
+    "latinAmerica": "Latin America",
+    "bulgaria": "Bulgaria"
+  }
+}

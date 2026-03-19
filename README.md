@@ -1,368 +1,367 @@
-# NEXUS SEARCH
+# 🌍 Zametki Kostik NEXUS SEARCH
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+## Global Decentralized Search Engine - Production Ready
+
+[![License: Proprietary](https://img.shields.io/badge/License-Proprietary-red.svg)](https://github.com/zametkikostik/NEXUS-SEARCH/blob/main/LICENSE)
 [![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/zametkikostik/NEXUS-SEARCH)
 [![Deploy to Fly.io](https://fly.io/public/button.svg)](https://fly.io/launch?repo=https://github.com/zametkikostik/NEXUS-SEARCH)
 
-## 🚀 Децентрализованная поисковая система нового поколения
-
-**NEXUS Search** — это privacy-first поисковая система с Web3 аутентификацией, IPFS хранением и токеномикой.
-
-### ✨ Особенности
-
-- 🔍 **6+ поисковых провайдеров** — Google, DuckDuckGo, Brave, Yandex, Dzen, Reddit
-- 🛡️ **Privacy-First** — никаких логов, никакого трекинга
-- 🔐 **Web3 Аутентификация** — вход через криптокошелёк (MetaMask, WalletConnect)
-- 📦 **IPFS Интеграция** — децентрализованное хранение результатов
-- 🔄 **Анти-Бан Система** — ротация прокси, обход блокировок
-- 💰 **Токеномика** — ERC20 токен NXS, стейкинг rewards
-- 🎯 **Контент Фильтры** — блокировка экстремизма, терроризма, пропаганды
-- ⚡ **Vercel Ready** — frontend готов к деплою на Vercel
-- 🐳 **Dockerized Backend** — backend готов к деплою на Fly.io/Railway/Render
+**Languages:** 🇬🇧 English | 🇷🇺 Русский | 🇧🇬 Български
 
 ---
 
-## 📁 Структура проекта
+## 🌐 Worldwide Deployment Ready
+
+Zametki Kostik NEXUS SEARCH is a **production-ready, decentralized, privacy-first search engine** designed for global deployment with:
+
+- ✅ **Multi-region support** (EU, US, APAC, LatAm)
+- ✅ **Multi-language** (EN, RU, BG + extensible)
+- ✅ **Regional compliance** (GDPR, CCPA, LGPD, APPI)
+- ✅ **Privacy-first architecture** (no tracking, no logs)
+- ✅ **Web3 integration** (wallet auth, tokenomics)
+- ✅ **Anti-ban scraping** (rotating proxies, circuit breakers)
+- ✅ **IPFS storage** (decentralized content)
+- ✅ **Global CDN** (Vercel Edge Network)
+
+---
+
+## 📍 Regional Deployment
+
+| Region | Frontend CDN | Backend Regions | Compliance |
+|--------|--------------|-----------------|------------|
+| **Europe** | Frankfurt | Frankfurt, Amsterdam | GDPR |
+| **North America** | East/West US | New York, San Francisco | CCPA |
+| **Asia Pacific** | Singapore | Singapore, Tokyo | PDPA |
+| **Latin America** | São Paulo | São Paulo | LGPD |
+| **Eastern Europe** | Frankfurt | Frankfurt, Warsaw | GDPR |
+
+---
+
+## 🚀 Quick Start
+
+### Option 1: Docker (Local Development)
+
+```bash
+git clone https://github.com/zametkikostik/NEXUS-SEARCH.git
+cd NEXUS-SEARCH
+cp .env.example .env
+docker-compose up -d
+```
+
+**Access:**
+- Frontend: http://localhost:3000
+- Backend: http://localhost:8000
+- API Docs: http://localhost:8000/docs
+
+### Option 2: Global Deployment (Vercel + Fly.io)
+
+See **[GLOBAL_DEPLOYMENT.md](GLOBAL_DEPLOYMENT.md)** for complete worldwide deployment guide.
+
+---
+
+## 🏗️ Architecture
 
 ```
 NEXUS-SEARCH/
 ├── frontend/                 # Next.js 14 + TypeScript (Vercel)
 │   ├── src/
-│   │   ├── app/             # App Router страницы
-│   │   ├── components/      # React компоненты
+│   │   ├── app/             # App Router pages
+│   │   ├── components/      # React components
+│   │   ├── i18n/            # Multi-language support
+│   │   │   ├── en.json      # English
+│   │   │   ├── ru.json      # Russian
+│   │   │   └── bg.json      # Bulgarian
 │   │   ├── hooks/           # Custom hooks
 │   │   ├── stores/          # Zustand stores
 │   │   └── utils/           # API client
-│   ├── vercel.json          # Vercel конфигурация
-│   ├── next.config.js       # Next.js конфиг
+│   ├── vercel.json          # Vercel config (global CDN)
 │   └── package.json
 ├── backend/                  # FastAPI + Python (Fly.io/Railway)
-│   ├── api/                 # API endpoints
-│   ├── core/                # Core модули
-│   ├── providers/           # Search providers
+│   ├── api/                 # REST API endpoints
+│   ├── core/                # Core modules
+│   │   ├── compliance/      # Regional compliance (GDPR, CCPA)
+│   │   ├── geo_routing.py   # Geo-based routing
+│   │   └── privacy.py       # Privacy settings
+│   ├── providers/           # Search providers (6+ sources)
 │   ├── anti_bot/            # Anti-bot layer
-│   ├── filters/             # Content filters
-│   ├── web3/                # Web3 auth
+│   ├── filters/             # Content filters (regional)
+│   ├── web3/                # Web3 authentication
 │   ├── ipfs/                # IPFS integration
-│   ├── tests/               # Unit tests
-│   ├── Dockerfile           # Production Docker
-│   ├── fly.toml             # Fly.io конфиг
-│   └── requirements-prod.txt
-├── contracts/               # Smart Contracts
-│   ├── NXS_Token.sol        # ERC20 токен
-│   ├── NXS_Staking.sol      # Стейкинг
-│   └── NXS_Subscription.sol # NFT подписка
-├── scripts/
-│   ├── deploy.sh            # Deploy скрипт
-│   └── init-github.sh       # GitHub инициализация
-├── docker-compose.yml       # Local development
+│   └── tests/               # Unit tests
+├── contracts/               # Smart Contracts (ERC20 + Staking + NFT)
+│   ├── NXS_Token.sol
+│   ├── NXS_Staking.sol
+│   └── NXS_Subscription.sol
+├── GLOBAL_DEPLOYMENT.md     # Complete global deployment guide
+├── LICENSE                  # Proprietary commercial license
 └── README.md
 ```
 
 ---
 
-## 🚀 Быстрый старт
-
-### Вариант 1: Docker (локальная разработка)
-
-```bash
-# Клонировать репозиторий
-git clone https://github.com/zametkikostik/NEXUS-SEARCH.git
-cd NEXUS-SEARCH
-
-# Скопировать .env
-cp .env.example .env
-
-# Запустить все сервисы
-docker-compose up -d
-
-# Доступ
-# Frontend: http://localhost:3000
-# Backend: http://localhost:8000
-# API Docs: http://localhost:8000/docs
-```
-
-### Вариант 2: Vercel + Внешний Backend
-
-#### 1. Деплой Frontend на Vercel
-
-```bash
-cd frontend
-
-# Установить зависимости
-npm install
-
-# Настроить .env.local
-cp .env.example .env.local
-nano .env.local  # Изменить NEXT_PUBLIC_API_URL
-
-# Деплой на Vercel
-vercel --prod
-```
-
-Или нажмите кнопку:
-
-[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/zametkikostik/NEXUS-SEARCH&project-name=nexus-search-frontend&repository-name=nexus-search-frontend&env=NEXT_PUBLIC_API_URL,NEXT_PUBLIC_WEB3_CHAIN_ID,NEXT_PUBLIC_CONTRACT_ADDRESS)
-
-#### 2. Деплой Backend на Fly.io
-
-```bash
-cd backend
-
-# Установить Fly.io CLI
-curl -L https://fly.io/install.sh | sh
-
-# Авторизация
-fly auth login
-
-# Создать приложение
-fly launch --name nexus-search-api
-
-# Настроить переменные окружения
-fly secrets set JWT_SECRET=your-secret \
-  WEB3_PROVIDER_URI=https://eth-mainnet.g.alchemy.com/v2/YOUR_KEY \
-  REDIS_URL=redis://your-redis-url
-
-# Деплой
-fly deploy
-```
-
-Или используйте Railway/Render:
-
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/nexus-search)
-[![Deploy on Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
-
----
-
 ## 🔌 API Endpoints
 
-### Поиск
+### Search
 
 ```bash
-# Базовый поиск
-curl "https://your-backend-url.com/api/v1/search?q=blockchain"
+# Global search
+curl "https://api.nexus-search.io/api/v1/search?q=blockchain"
 
-# С провайдерами
-curl "https://your-backend-url.com/api/v1/search?q=crypto&providers=google,duckduckgo&limit=10"
+# With region
+curl "https://eu-api.nexus-search.io/api/v1/search?q=crypto&region=eu"
+
+# With language
+curl "https://api.nexus-search.io/api/v1/search?q=web3&lang=bg"
 ```
 
-### Аутентификация
+### Authentication
 
 ```bash
-# Получить сообщение для подписи
-curl "https://your-backend-url.com/api/v1/auth/message?address=0x742d35Cc6634C0532925a3b844Bc9e7595f0bEb"
+# Get message to sign
+curl "https://api.nexus-search.io/api/v1/auth/message?address=0x..."
 
-# Верифицировать подпись
-curl -X POST "https://your-backend-url.com/api/v1/auth/verify" \
+# Verify signature
+curl -X POST "https://api.nexus-search.io/api/v1/auth/verify" \
   -H "Content-Type: application/json" \
   -d '{"address":"0x...","message":"...","signature":"0x..."}'
-```
-
-### IPFS
-
-```bash
-# Получить из IPFS
-curl "https://your-backend-url.com/api/v1/ipfs/retrieve/QmYourCID"
 ```
 
 ### Health
 
 ```bash
-curl "https://your-backend-url.com/health"
+# Global health check
+curl "https://api.nexus-search.io/health"
+
+# Regional health
+curl "https://eu-api.nexus-search.io/health"
 ```
 
 ---
 
-## 🔐 Настройка окружения
+## 🌐 Multi-Language Support
 
-### Frontend (.env.local)
+### Default Languages
 
-```bash
-# API URL (ваш backend)
-NEXT_PUBLIC_API_URL=https://nexus-search-api.fly.dev
+- 🇬🇧 **English** (en)
+- 🇷🇺 **Russian** (ru)
+- 🇧🇬 **Bulgarian** (bg)
 
-# Web3
-NEXT_PUBLIC_WEB3_CHAIN_ID=1
-NEXT_PUBLIC_CONTRACT_ADDRESS=0x0000000000000000000000000000000000000000
-NEXT_PUBLIC_TOKEN_CONTRACT_ADDRESS=0x0000000000000000000000000000000000000000
-NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID=your-walletconnect-id
+### Adding Languages
 
-# IPFS
-NEXT_PUBLIC_IPFS_GATEWAY=https://ipfs.io/ipfs/
-```
-
-### Backend (.env)
-
-```bash
-# Обязательно
-JWT_SECRET=your-super-secret-jwt-key-min-32-chars
-WEB3_PROVIDER_URI=https://eth-mainnet.g.alchemy.com/v2/YOUR_KEY
-
-# Redis
-REDIS_HOST=localhost
-REDIS_PORT=6379
-REDIS_URL=redis://localhost:6379
-
-# IPFS
-IPFS_HOST=localhost
-IPFS_PORT=5001
-
-# Опционально
-GOOGLE_API_KEY=your-google-api-key
-GOOGLE_CX=your-google-cx
-BRAVE_API_KEY=your-brave-api-key
-SENTRY_DSN=your-sentry-dsn
+```typescript
+// frontend/src/i18n/index.ts
+export const supportedLanguages = [
+  { code: 'en', name: 'English', flag: '🇬🇧' },
+  { code: 'ru', name: 'Русский', flag: '🇷🇺' },
+  { code: 'bg', name: 'Български', flag: '🇧🇬' },
+  { code: 'es', name: 'Español', flag: '🇪🇸' }, // Add Spanish
+]
 ```
 
 ---
 
-## 💰 Токеномика NXS
+## ⚖️ Regional Compliance
 
-| Категория | Процент | Описание |
-|-----------|---------|----------|
-| Пользователи | 30% | Rewards за поиск и стейкинг |
-| Команда | 20% | 4 года вестинга |
-| Инвесторы | 20% | 2 года вестинга |
-| Экосистема | 20% | Гранты, партнёрства |
-| Ликвидность | 10% | DEX листинги |
+### Europe (GDPR)
 
-### Развёртывание контрактов
+- ✅ No user tracking
+- ✅ No cookies (except essential)
+- ✅ Data deletion on request
+- ✅ Privacy by default
 
-```bash
-cd contracts
+### USA (CCPA/CPRA)
 
-# Установить зависимости
-npm install
+- ✅ Opt-out of data selling
+- ✅ Disclosure requirements
+- ✅ Right to know
 
-# Скомпилировать
-npm run compile
+### Bulgaria (Local)
 
-# Деплой на testnet
-npx hardhat run scripts/deploy.js --network sepolia
+- ✅ GDPR compliance
+- ✅ Bulgarian language support
+- ✅ Local content filtering
 
-# Деплой на mainnet
-npx hardhat run scripts/deploy.js --network mainnet
+---
+
+## 💰 Tokenomics
+
+| Category | Percentage | Description |
+|----------|------------|-------------|
+| **Users** | 30% | Search rewards, staking |
+| **Team** | 20% | 4-year vesting |
+| **Investors** | 20% | 2-year vesting |
+| **Ecosystem** | 20% | Grants, partnerships |
+| **Liquidity** | 10% | DEX listings |
+
+### Global Pricing
+
+| Region | Price per Search | Currency |
+|--------|-----------------|----------|
+| USA | $0.01 | USD |
+| EU | €0.01 | EUR |
+| Bulgaria | лв0.02 | BGN |
+| India | ₹0.80 | INR (PPP adjusted) |
+
+---
+
+## 🔒 Privacy & Security
+
+### Privacy-First Architecture
+
+```python
+PRIVACY_SETTINGS = {
+    'no_logs': True,
+    'no_tracking': True,
+    'no_analytics': True,
+    'anonymous_search': True,
+    'no_ip_storage': True,
+    'data_encryption': 'AES-256',
+    'https_only': True,
+}
+```
+
+### Regional Content Filtering
+
+```python
+REGIONAL_FILTERS = {
+    'bg': {  # Bulgaria
+        'blocked_categories': ['extremism', 'gambling', 'adult'],
+        'language_priority': ['bg', 'en'],
+    },
+    'de': {  # Germany
+        'blocked_categories': ['hate_speech', 'nazi_content'],
+        'language_priority': ['de', 'en'],
+    },
+    # Add more regions...
+}
 ```
 
 ---
 
-## 🧪 Тестирование
+## 🚀 Deployment
 
-### Backend
+### Backend (Multi-Region)
 
 ```bash
 cd backend
-pip install -r requirements.txt
-pytest --cov=.
+
+# Deploy to Fly.io (multiple regions)
+fly launch --name nexus-search-api
+fly regions set fra,iad,sin,sao
+fly secrets set JWT_SECRET=$(openssl rand -hex 32)
+fly secrets set WEB3_PROVIDER_URI=...
+fly deploy
+fly scale count 6  # 2 per region
 ```
 
-### Frontend
+### Frontend (Global CDN)
 
 ```bash
 cd frontend
-npm install
-npm test
+
+# Deploy to Vercel
+vercel --prod
+
+# Add custom domain
+vercel domains add nexus-search.io
 ```
 
 ---
 
-## 📊 Мониторинг
+## 📊 Monitoring
 
-### Prometheus метрики
+### Global Health Dashboard
 
 ```bash
-curl https://your-backend-url.com/metrics
+# Check all regions
+curl "https://api.nexus-search.io/health/global"
+
+# Response:
+{
+  "status": "operational",
+  "regions": {
+    "EU": "healthy",
+    "US": "healthy",
+    "APAC": "healthy",
+    "LatAm": "healthy"
+  }
+}
 ```
 
-### Health checks
+### Metrics to Track
 
-```bash
-# Backend health
-curl https://your-backend-url.com/health
-
-# Provider status
-curl https://your-backend-url.com/providers
-```
+- Response time by region
+- Error rates by country
+- Search volume by language
+- Token usage globally
 
 ---
 
-## 🚀 Production Deployment Checklist
+## 📱 Mobile Optimization
 
-### Перед деплоем
-
-- [ ] Сгенерировать secure JWT_SECRET (минимум 32 символа)
-- [ ] Настроить Web3 provider (Infura/Alchemy)
-- [ ] Получить API ключи для провайдеров (Google, Brave)
-- [ ] Настроить Redis (production instance)
-- [ ] Настроить IPFS node (или использовать Pinata)
-- [ ] Развернуть смарт-контракты
-- [ ] Обновить адреса контрактов в .env
-
-### Деплой
-
-- [ ] Задеплоить backend (Fly.io/Railway/Render)
-- [ ] Задеплоить frontend (Vercel)
-- [ ] Настроить домен и SSL
-- [ ] Настроить CORS для frontend domain
-- [ ] Проверить health endpoints
-- [ ] Протестировать поиск
-- [ ] Протестировать Web3 auth
-
-### После деплоя
-
-- [ ] Настроить мониторинг (Sentry, Prometheus)
-- [ ] Настроить логирование
-- [ ] Настроить backup (Redis, IPFS)
-- [ ] Настроить auto-scaling
-- [ ] Добавить rate limiting
-
----
-
-## 🔒 Безопасность
-
-### Настройки безопасности
-
-- ✅ Input validation (Pydantic)
-- ✅ SSRF prevention
-- ✅ CORS configuration
-- ✅ Rate limiting
-- ✅ Security headers
-- ✅ HTTPS only
-
-### Рекомендации
-
-1. Используйте secure JWT_SECRET (минимум 32 символа)
-2. Включите HTTPS в production
-3. Настройте firewall правила
-4. Регулярно обновляйте зависимости
-5. Используйте multi-sig для контрактов
+- ✅ Responsive design (mobile-first)
+- ✅ PWA support (installable)
+- ✅ Touch-optimized UI
+- ✅ Offline mode (cached searches)
 
 ---
 
 ## 🤝 Contributing
 
-1. Fork репозиторий
-2. Создать feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit изменения (`git commit -m 'Add amazing feature'`)
-4. Push (`git push origin feature/amazing-feature`)
-5. Открыть Pull Request
+This is a **proprietary commercial project**. Contributions require written approval from the licensor.
+
+For licensing inquiries: **intelligent.swallow.aybm@mask.me**
 
 ---
 
-## 📞 Контакты
+## 📞 Global Support
 
-- **GitHub**: https://github.com/zametkikostik/NEXUS-SEARCH
-- **Email**: intelligent.swallow.aybm@mask.me
-
----
-
-## 📄 Лицензия
-
-MIT License — см. файл [LICENSE](LICENSE) для деталей.
+| Region | Email | Hours |
+|--------|-------|-------|
+| **Global** | intelligent.swallow.aybm@mask.me | 24/7 |
+| **Europe** | eu-support@nexus-search.io | 9-18 CET |
+| **Americas** | us-support@nexus-search.io | 9-18 EST |
+| **APAC** | apac-support@nexus-search.io | 9-18 SGT |
 
 ---
 
-**NEXUS SEARCH** — Децентрализованное будущее поиска 🌐
+## 📄 License
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/zametkikostik/NEXUS-SEARCH)
+**Proprietary Commercial License**
+
+- ✅ Use only under written agreement
+- ✅ Revenue sharing required ([X]% of revenue)
+- ❌ No unauthorized distribution
+- ❌ No forks without approval
+- ❌ No publication without consent
+
+See **[LICENSE](LICENSE)** for full terms.
+
+---
+
+## 🎯 Ready for Worldwide Launch
+
+- [x] Multi-region deployment
+- [x] Multi-language support (EN, RU, BG)
+- [x] Regional compliance (GDPR, CCPA, LGPD)
+- [x] Global CDN (Vercel Edge Network)
+- [x] Multi-currency pricing
+- [x] Privacy-first architecture
+- [x] Web3 integration
+- [x] Anti-ban scraping
+- [x] IPFS storage
+- [x] Tokenomics ready
+- [x] Mobile optimized
+- [x] Monitoring configured
+
+---
+
+**Zametki Kostik NEXUS SEARCH** - Deploy Anywhere. Search Everywhere. 🌍
+
+[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/zametkikostik/NEXUS-SEARCH)
 [![Deploy to Fly.io](https://fly.io/public/button.svg)](https://fly.io/launch?repo=https://github.com/zametkikostik/NEXUS-SEARCH)
+
+---
+
+*Last Updated: January 2026*  
+*Version: 1.0 - Global Production Ready*

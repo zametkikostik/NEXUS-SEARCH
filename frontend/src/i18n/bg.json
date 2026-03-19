@@ -1,0 +1,104 @@
+{
+  "common": {
+    "search": "Търсене",
+    "searching": "Търсене...",
+    "loading": "Зареждане",
+    "error": "Грешка",
+    "retry": "Опитай отново",
+    "cancel": "Отказ",
+    "save": "Запази",
+    "delete": "Изтрий",
+    "close": "Затвори",
+    "back": "Назад",
+    "next": "Напред",
+    "previous": "Предишен",
+    "home": "Начало",
+    "settings": "Настройки",
+    "profile": "Профил",
+    "logout": "Изход",
+    "connect": "Свържи",
+    "disconnect": "Изключи",
+    "connected": "Свързано",
+    "disconnected": "Изключено"
+  },
+  "search": {
+    "placeholder": "Търсене в децентрализираната мрежа...",
+    "results": "резултата",
+    "noResults": "Няма намерени резултати",
+    "searchAgain": "Опитайте с различно търсене",
+    "providers": "Провайдъри",
+    "filterContent": "Филтрирай съдържанието",
+    "safeSearch": "Безопасно търсене",
+    "advancedSearch": "Разширено търсене",
+    "recentSearches": "Скорошни търсения",
+    "clearHistory": "Изчисти историята"
+  },
+  "wallet": {
+    "connectWallet": "Свържи портфейл",
+    "disconnectWallet": "Изключи портфейл",
+    "walletConnected": "Портфейлът е свързан",
+    "walletDisconnected": "Портфейлът е изключен",
+    "wrongNetwork": "Грешна мрежа",
+    "switchNetwork": "Превключи мрежата",
+    "copyAddress": "Копирай адрес",
+    "addressCopied": "Адресът е копиран",
+    "balance": "Баланс",
+    "insufficientBalance": "Недостатъчен баланс"
+  },
+  "token": {
+    "tokenName": "NEXUS Search Token",
+    "symbol": "NXS",
+    "balance": "Баланс на токени",
+    "stake": "Стейкни",
+    "unstake": "Извади от стейкинг",
+    "rewards": "Награди",
+    "claimRewards": "Вземи награди",
+    "stakingAPY": "APY на стейкинг",
+    "totalStaked": "Общо в стейкинг",
+    "yourStake": "Вашият стейк",
+    "earnings": "Печалби"
+  },
+  "nav": {
+    "home": "Начало",
+    "search": "Търсене",
+    "token": "Токен",
+    "staking": "Стейкинг",
+    "about": "За проекта",
+    "docs": "Документация",
+    "support": "Поддръжка"
+  },
+  "footer": {
+    "privacy": "Политика за поверителност",
+    "terms": "Условия за ползване",
+    "license": "Лиценз",
+    "contact": "Контакти",
+    "github": "GitHub",
+    "telegram": "Telegram",
+    "copyright": "© 2026 Zametki Kostik NEXUS SEARCH. Всички права запазени."
+  },
+  "compliance": {
+    "gdprNotice": "GDPR съвместим - Без проследяване",
+    "ccpaNotice": "CCPA съвместим - Не продавай данни",
+    "cookieNotice": "Използваме само основни бисквитки",
+    "privacyFirst": "Търсене с приоритет на поверителността",
+    "noLogs": "Няма съхранени логове",
+    "anonymous": "Анонимно търсене"
+  },
+  "errors": {
+    "networkError": "Мрежова грешка. Моля, опитайте отново.",
+    "searchError": "Търсенето не бе успешно. Моля, опитайте отново.",
+    "walletError": "Неуспешно свързване на портфейл.",
+    "authError": "Грешка при удостоверяване.",
+    "serverError": "Сървърна грешка. Моля, опитайте по-късно.",
+    "notFound": "Страницата не е намерена.",
+    "rateLimit": "Твърде много заявки. Моля, изчакайте."
+  },
+  "regions": {
+    "selectRegion": "Изберете регион",
+    "europe": "Европа",
+    "northAmerica": "Северна Америка",
+    "asiaPacific": "Азиатско-Тихоокеански регион",
+    "latinAmerica": "Латинска Америка",
+    "bulgaria": "България"
+  }
+}

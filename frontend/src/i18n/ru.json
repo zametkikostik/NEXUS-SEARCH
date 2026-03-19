@@ -1,0 +1,104 @@
+{
+  "common": {
+    "search": "Поиск",
+    "searching": "Поиск...",
+    "loading": "Загрузка",
+    "error": "Ошибка",
+    "retry": "Повторить",
+    "cancel": "Отмена",
+    "save": "Сохранить",
+    "delete": "Удалить",
+    "close": "Закрыть",
+    "back": "Назад",
+    "next": "Далее",
+    "previous": "Назад",
+    "home": "Главная",
+    "settings": "Настройки",
+    "profile": "Профиль",
+    "logout": "Выйти",
+    "connect": "Подключить",
+    "disconnect": "Отключить",
+    "connected": "Подключено",
+    "disconnected": "Отключено"
+  },
+  "search": {
+    "placeholder": "Поиск в децентрализованной сети...",
+    "results": "результатов",
+    "noResults": "Ничего не найдено",
+    "searchAgain": "Попробуйте другой запрос",
+    "providers": "Провайдеры",
+    "filterContent": "Фильтровать контент",
+    "safeSearch": "Безопасный поиск",
+    "advancedSearch": "Расширенный поиск",
+    "recentSearches": "Недавние запросы",
+    "clearHistory": "Очистить историю"
+  },
+  "wallet": {
+    "connectWallet": "Подключить кошелёк",
+    "disconnectWallet": "Отключить кошелёк",
+    "walletConnected": "Кошелёк подключён",
+    "walletDisconnected": "Кошелёк отключён",
+    "wrongNetwork": "Неверная сеть",
+    "switchNetwork": "Переключить сеть",
+    "copyAddress": "Копировать адрес",
+    "addressCopied": "Адрес скопирован",
+    "balance": "Баланс",
+    "insufficientBalance": "Недостаточно средств"
+  },
+  "token": {
+    "tokenName": "NEXUS Search Token",
+    "symbol": "NXS",
+    "balance": "Баланс токенов",
+    "stake": "Стейкать",
+    "unstake": "Вывести из стейкинга",
+    "rewards": "Награды",
+    "claimRewards": "Забрать награды",
+    "stakingAPY": "APY стейкинга",
+    "totalStaked": "Всего в стейкинге",
+    "yourStake": "Ваш стейк",
+    "earnings": "Заработок"
+  },
+  "nav": {
+    "home": "Главная",
+    "search": "Поиск",
+    "token": "Токен",
+    "staking": "Стейкинг",
+    "about": "О проекте",
+    "docs": "Документация",
+    "support": "Поддержка"
+  },
+  "footer": {
+    "privacy": "Политика конфиденциальности",
+    "terms": "Условия использования",
+    "license": "Лицензия",
+    "contact": "Контакты",
+    "github": "GitHub",
+    "telegram": "Telegram",
+    "copyright": "© 2026 Zametki Kostik NEXUS SEARCH. Все права защищены."
+  },
+  "compliance": {
+    "gdprNotice": "GDPR совместим - Нет отслеживания",
+    "ccpaNotice": "CCPA совместим - Не продавать данные",
+    "cookieNotice": "Используем только необходимые cookies",
+    "privacyFirst": "Поиск с приоритетом приватности",
+    "noLogs": "Логи не хранятся",
+    "anonymous": "Анонимный поиск"
+  },
+  "errors": {
+    "networkError": "Ошибка сети. Пожалуйста, попробуйте снова.",
+    "searchError": "Поиск не удался. Пожалуйста, попробуйте снова.",
+    "walletError": "Не удалось подключить кошелёк.",
+    "authError": "Ошибка аутентификации.",
+    "serverError": "Ошибка сервера. Пожалуйста, попробуйте позже.",
+    "notFound": "Страница не найдена.",
+    "rateLimit": "Слишком много запросов. Пожалуйста, подождите."
+  },
+  "regions": {
+    "selectRegion": "Выберите регион",
+    "europe": "Европа",
+    "northAmerica": "Северная Америка",
+    "asiaPacific": "Азиатско-Тихоокеанский регион",
+    "latinAmerica": "Латинская Америка",
+    "bulgaria": "Болгария"
+  }
+}
