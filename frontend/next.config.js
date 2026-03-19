@@ -72,6 +72,12 @@ const nextConfig = {
       bodySizeLimit: '2mb',
     },
   },
+  // i18n configuration
+  i18n: {
+    locales: ['en', 'ru', 'bg'],
+    defaultLocale: 'en',
+    localeDetection: true,
+  },
 }
 
 module.exports = nextConfig
