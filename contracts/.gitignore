@@ -1,0 +1,50 @@
+# Contracts
+contracts/node_modules/
+contracts/artifacts/
+contracts/cache/
+contracts/.env
+
+# Python
+backend/__pycache__/
+backend/*.pyc
+backend/.pytest_cache/
+backend/coverage/
+backend/.coverage
+backend/htmlcov/
+
+# Node
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/npm-debug.log*
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Testing
+coverage/
+.nyc_output/
+
+# Docker
+docker-compose.override.yml
+
+# Temporary
+tmp/
+temp/
+*.tmp

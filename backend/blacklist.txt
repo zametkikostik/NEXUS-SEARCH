@@ -1,0 +1,40 @@
+# Blacklist Keywords for Content Filtering
+# Format: [category] followed by keywords
+
+[extremism]
+extremist
+extremism
+radicalize
+radicalization
+hate group
+supremacist
+white supremacy
+neo-nazi
+violent extremism
+domestic terrorism
+
+[terrorism]
+terrorist
+terrorism
+jihadist
+militant group
+bomb making
+attack instructions
+recruitment for terrorism
+
+[propaganda]
+state propaganda
+fake news
+disinformation campaign
+conspiracy theory
+election fraud claims
+anti-vaccine misinformation
+
+[spam]
+click here
+buy now
+limited offer
+act now
+free money
+work from home
+make money fast

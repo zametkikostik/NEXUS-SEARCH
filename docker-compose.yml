@@ -1,0 +1,109 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=redis://redis:6379
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - IPFS_HOST=ipfs
+      - IPFS_PORT=5001
+      - WEB3_PROVIDER_URI=${WEB3_PROVIDER_URI:-http://localhost:8545}
+      - JWT_SECRET=${JWT_SECRET:-change-me-in-production}
+      - LOG_LEVEL=INFO
+      - ALLOWED_ORIGINS=http://localhost:3000,http://localhost:8080,https://nexus-search.io
+    depends_on:
+      - redis
+      - ipfs
+    networks:
+      - nexus-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
+      - NEXT_PUBLIC_WEB3_CHAIN_ID=${WEB3_CHAIN_ID:-1}
+      - NEXT_PUBLIC_CONTRACT_ADDRESS=${CONTRACT_ADDRESS:-0x0000000000000000000000000000000000000000}
+      - NEXT_PUBLIC_TOKEN_CONTRACT_ADDRESS=${TOKEN_CONTRACT_ADDRESS:-0x0000000000000000000000000000000000000000}
+      - NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID=${WALLET_CONNECT_PROJECT_ID:-nexus-search}
+    depends_on:
+      - backend
+    networks:
+      - nexus-network
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    command: redis-server --appendonly yes --maxmemory 256mb --maxmemory-policy allkeys-lru
+    networks:
+      - nexus-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  ipfs:
+    image: ipfs/kubo:latest
+    ports:
+      - "5001:5001"
+      - "4001:4001"
+      - "8080:8080"
+    volumes:
+      - ipfs-data:/data/ipfs
+    environment:
+      - IPFS_PROFILE=server
+      - IPFS_SWARM_KEY=/data/ipfs/swarm.key
+    networks:
+      - nexus-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5001/api/v0/version"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Optional: Local Ethereum node for development
+  ganache:
+    image: trufflesuite/ganache:latest
+    ports:
+      - "8545:8545"
+    command: --defaultBalance 1000 --gasLimit 10000000 -m "nexus search decentralized web3 privacy token"
+    networks:
+      - nexus-network
+    profiles:
+      - development
+
+volumes:
+  redis-data:
+    driver: local
+  ipfs-data:
+    driver: local
+
+networks:
+  nexus-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.28.0.0/16
