@@ -174,7 +174,7 @@ fly secrets set WEB3_PROVIDER_URI=https://eth-mainnet.g.alchemy.com/v2/YOUR_KEY
 ## 📞 Поддержка
 
 - GitHub Issues: https://github.com/zametkikostik/NEXUS-SEARCH/issues
-- Email: zametkikostik@gmail.com
+- Email: intelligent.swallow.aybm@mask.me
 
 ---
 

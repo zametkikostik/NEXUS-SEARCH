@@ -352,8 +352,7 @@ curl https://your-backend-url.com/providers
 ## 📞 Контакты
 
 - **GitHub**: https://github.com/zametkikostik/NEXUS-SEARCH
-- **Email**: zametkikostik@gmail.com
-- **Telegram**: @zametkikostik
+- **Email**: intelligent.swallow.aybm@mask.me
 
 ---
 
